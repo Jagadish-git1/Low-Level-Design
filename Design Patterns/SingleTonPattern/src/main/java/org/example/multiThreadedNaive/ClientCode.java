@@ -19,7 +19,7 @@ public class ClientCode{
         @Override
         public void run() {
             try {
-                Singleton singleton = new Singleton("Foo");
+                Singleton singleton = Singleton.getInstance("Foo");
                 System.out.println(singleton.value);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
@@ -32,7 +32,7 @@ public class ClientCode{
         @Override
         public void run() {
             try {
-                Singleton singleton = new Singleton("Bar");
+                Singleton singleton = Singleton.getInstance("Bar");
                 System.out.println(singleton.value);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
